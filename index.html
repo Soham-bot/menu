@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World Flavors Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>World Flavors Restaurant</h1>
+    <p>Explore tempting dishes from around the globe!</p>
+  </header>
+  <nav>
+    <button class="active" onclick="showMenu('italian')">Italian</button>
+    <button onclick="showMenu('chinese')">Chinese</button>
+    <button onclick="showMenu('mexican')">Mexican</button>
+    <button onclick="showMenu('indian')">Indian</button>
+  </nav>
+  <div class="container">
+    <!-- Italian Cuisine -->
+    <section id="italian" class="menu-section active">
+      <h2 class="cuisine-title">Italian Cuisine</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&w=400&q=80" alt="Margherita Pizza">
+          <div class="menu-content">
+            <span class="dish-name">Margherita Pizza</span>
+            <span class="desc">Classic pizza with fresh tomato, mozzarella, and basil leaves.</span>
+            <span class="price">₹350</span>
+            <button class="add-btn" onclick="addToCart('Margherita Pizza', 350)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Pasta Alfredo">
+          <div class="menu-content">
+            <span class="dish-name">Pasta Alfredo</span>
+            <span class="desc">Fettuccine tossed in creamy Alfredo sauce and parmesan.</span>
+            <span class="price">₹320</span>
+            <button class="add-btn" onclick="addToCart('Pasta Alfredo', 320)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg?auto=compress&w=400&q=80" alt="Bruschetta">
+          <div class="menu-content">
+            <span class="dish-name">Bruschetta</span>
+            <span class="desc">Grilled bread topped with tomatoes, garlic, olive oil, and basil.</span>
+            <span class="price">₹180</span>
+            <button class="add-btn" onclick="addToCart('Bruschetta', 180)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Lasagna">
+          <div class="menu-content">
+            <span class="dish-name">Lasagna</span>
+            <span class="desc">Layers of pasta, cheese, meat sauce, and béchamel, baked golden.</span>
+            <span class="price">₹400</span>
+            <button class="add-btn" onclick="addToCart('Lasagna', 400)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&w=400&q=80" alt="Tiramisu">
+          <div class="menu-content">
+            <span class="dish-name">Tiramisu</span>
+            <span class="desc">Coffee-flavored Italian dessert with mascarpone and cocoa.</span>
+            <span class="price">₹220</span>
+            <button class="add-btn" onclick="addToCart('Tiramisu', 220)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Chinese Cuisine -->
+    <section id="chinese" class="menu-section">
+      <h2 class="cuisine-title">Chinese Cuisine</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Kung Pao Chicken">
+          <div class="menu-content">
+            <span class="dish-name">Kung Pao Chicken</span>
+            <span class="desc">Spicy stir-fried chicken with peanuts, veggies, and chili peppers.</span>
+            <span class="price">₹300</span>
+            <button class="add-btn" onclick="addToCart('Kung Pao Chicken', 300)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Vegetable Fried Rice">
+          <div class="menu-content">
+            <span class="dish-name">Vegetable Fried Rice</span>
+            <span class="desc">Fragrant rice tossed with fresh vegetables and soy sauce.</span>
+            <span class="price">₹200</span>
+            <button class="add-btn" onclick="addToCart('Vegetable Fried Rice', 200)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Spring Rolls">
+          <div class="menu-content">
+            <span class="dish-name">Spring Rolls</span>
+            <span class="desc">Crispy rolls stuffed with mixed vegetables and glass noodles.</span>
+            <span class="price">₹150</span>
+            <button class="add-btn" onclick="addToCart('Spring Rolls', 150)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Schezwan Noodles">
+          <div class="menu-content">
+            <span class="dish-name">Schezwan Noodles</span>
+            <span class="desc">Spicy noodles tossed with veggies and Schezwan sauce.</span>
+            <span class="price">₹220</span>
+            <button class="add-btn" onclick="addToCart('Schezwan Noodles', 220)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Dim Sum">
+          <div class="menu-content">
+            <span class="dish-name">Dim Sum</span>
+            <span class="desc">Steamed dumplings filled with veggies or chicken, served hot.</span>
+            <span class="price">₹250</span>
+            <button class="add-btn" onclick="addToCart('Dim Sum', 250)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mexican Cuisine -->
+    <section id="mexican" class="menu-section">
+      <h2 class="cuisine-title">Mexican Cuisine</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Tacos al Pastor">
+          <div class="menu-content">
+            <span class="dish-name">Tacos al Pastor</span>
+            <span class="desc">Corn tortillas filled with spiced pork, pineapple, and salsa.</span>
+            <span class="price">₹250</span>
+            <button class="add-btn" onclick="addToCart('Tacos al Pastor', 250)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Nachos Supreme">
+          <div class="menu-content">
+            <span class="dish-name">Nachos Supreme</span>
+            <span class="desc">Tortilla chips loaded with cheese, beans, jalapeños, and salsa.</span>
+            <span class="price">₹220</span>
+            <button class="add-btn" onclick="addToCart('Nachos Supreme', 220)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Quesadilla">
+          <div class="menu-content">
+            <span class="dish-name">Quesadilla</span>
+            <span class="desc">Grilled tortilla stuffed with cheese and vegetables.</span>
+            <span class="price">₹200</span>
+            <button class="add-btn" onclick="addToCart('Quesadilla', 200)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Burrito Bowl">
+          <div class="menu-content">
+            <span class="dish-name">Burrito Bowl</span>
+            <span class="desc">Rice, beans, veggies, salsa, and cheese in a hearty bowl.</span>
+            <span class="price">₹270</span>
+            <button class="add-btn" onclick="addToCart('Burrito Bowl', 270)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Churros">
+          <div class="menu-content">
+            <span class="dish-name">Churros</span>
+            <span class="desc">Fried dough pastry rolled in cinnamon sugar, with chocolate dip.</span>
+            <span class="price">₹160</span>
+            <button class="add-btn" onclick="addToCart('Churros', 160)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Indian Cuisine -->
+    <section id="indian" class="menu-section">
+      <h2 class="cuisine-title">Indian Cuisine</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Butter Chicken">
+          <div class="menu-content">
+            <span class="dish-name">Butter Chicken</span>
+            <span class="desc">Tender chicken cooked in creamy tomato and butter gravy.</span>
+            <span class="price">₹320</span>
+            <button class="add-btn" onclick="addToCart('Butter Chicken', 320)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Paneer Tikka">
+          <div class="menu-content">
+            <span class="dish-name">Paneer Tikka</span>
+            <span class="desc">Grilled cottage cheese cubes marinated in spices.</span>
+            <span class="price">₹250</span>
+            <button class="add-btn" onclick="addToCart('Paneer Tikka', 250)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Dal Makhani">
+          <div class="menu-content">
+            <span class="dish-name">Dal Makhani</span>
+            <span class="desc">Slow-cooked black lentils in a rich, buttery sauce.</span>
+            <span class="price">₹200</span>
+            <button class="add-btn" onclick="addToCart('Dal Makhani', 200)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Chicken Biryani">
+          <div class="menu-content">
+            <span class="dish-name">Chicken Biryani</span>
+            <span class="desc">Aromatic basmati rice cooked with chicken and spices.</span>
+            <span class="price">₹350</span>
+            <button class="add-btn" onclick="addToCart('Chicken Biryani', 350)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="menu-img" src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&q=80" alt="Gulab Jamun">
+          <div class="menu-content">
+            <span class="dish-name">Gulab Jamun</span>
+            <span class="desc">Soft milk-solid balls soaked in rose-flavored sugar syrup.</span>
+            <span class="price">₹120</span>
+            <button class="add-btn" onclick="addToCart('Gulab Jamun', 120)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cart Section -->
+    <aside class="cart-section">
+      <h3>Your Cart</h3>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-total" id="cart-total">Total: ₹0</div>
+    </aside>
+    <!-- Payment Section -->
+    <aside class="payment-section">
+      <h3>Payment</h3>
+      <form id="payment-form" onsubmit="return handlePayment(event)">
+        <div class="payment-methods">
+          <label><input type="radio" name="payment" value="Card" checked> Card</label>
+          <label><input type="radio" name="payment" value="UPI"> UPI</label>
+        </div>
+        <button type="submit" class="pay-btn">Pay Now</button>
+      </form>
+      <div class="success-message" id="success-message"></div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
